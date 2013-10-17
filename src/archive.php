@@ -233,6 +233,9 @@ abstract class ezcArchive implements Iterator
      */
     public function close()
     {
+	if(null != $this->file) {
+		$this->file->close();
+	}
     }
 
     /**
